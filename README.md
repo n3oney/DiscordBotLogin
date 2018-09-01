@@ -1,5 +1,5 @@
 # DiscordBotLogin
-Log in to an Discord Bot and get an UI View using bot's token!
+Log in as a Discord Bot and get an UI View using bot's token!
 
 ## How to use
 #### Requirements
