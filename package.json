@@ -1,0 +1,17 @@
+{
+  "name": "FirstElectronApp",
+  "version": "1.0.0",
+  "main": "start.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.8"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ejs": "^2.6.1",
+    "ejs-electron": "^2.0.3"
+  }
+}

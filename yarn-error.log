@@ -1,0 +1,38 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add discord.js
+
+PATH: 
+  /home/neoney/bin:/home/neoney/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.9.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ECONNREFUSED 217.74.65.145:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1161:14)
+
+npm manifest: 
+  {
+    "name": "FirstElectronApp",
+    "version": "1.0.0",
+    "main": "start.js",
+    "scripts": {
+      "test": "electron ."
+    },
+    "license": "MIT",
+    "devDependencies": {
+      "electron": "^2.0.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
