@@ -20,6 +20,7 @@ function createWindow () {
   // be closed automatically when the JavaScript object is garbage collected.
   async function createWindow () {
     win = new BrowserWindow({width: 800, height: 600})
+    win.maximize()
     // and load the index.html of the app.
     win.loadURL('file://' + __dirname + '/index.ejs')
 

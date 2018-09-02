@@ -22,7 +22,14 @@ document.getElementById('aa').value = ""
 client.on("message", async message => {
   if(message.channel.id !== selectedChannel) return;
   let text = document.createElement("div")
+  let name = document.createTextNode(message.author.username + ": ")
   let content = document.createTextNode(message.content)
+  let avatar = document.createElement("img");
+  avatar.height = "50"
+  avatar.width = "50"
+  avatar.src = (!message.author.avatarURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : message.author.avatarURL
+  text.appendChild(avatar)
+    text.appendChild(name)
   text.appendChild(content)
   var end = document.getElementById("end")
   document.getElementById("msgs").insertBefore(text, end)
@@ -54,10 +61,14 @@ function loadGuilds() {
             arr.forEach(cnt => {
               console.log("tryna page")
             let text = document.createElement("div")
+            let name = document.createTextNode(cnt.author.username + ": ")
             let content = document.createTextNode(cnt.content)
             let avatar = document.createElement("img");
-            avatar.src = cnt.author.avatarURL
+            avatar.src = (!cnt.author.avatarURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : cnt.author.avatarURL
+            avatar.height = "50"
+            avatar.width = "50"
             text.appendChild(avatar)
+            text.appendChild(name)
             text.appendChild(content)
             var end = document.getElementById("end")
             document.getElementById("msgs").insertBefore(text, end)
@@ -72,7 +83,11 @@ function loadGuilds() {
           })
 } );
         let content = document.createTextNode(guild.name)
-        guildLink.appendChild(content)
+        let av = document.createElement("img")
+        av.src = (!guild.iconURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : guild.iconURL
+        av.height = "100"
+        av.width = "100"
+        guildLink.appendChild(av)
         sidenav.appendChild(guildLink)
       })
     })

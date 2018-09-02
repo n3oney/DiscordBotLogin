@@ -10,11 +10,7 @@
   }
 }
 
-img {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-}
+
 
 /* The sidebar menu */
 .sidenav {
@@ -75,9 +71,15 @@ img {
 .sending {
   position: fixed;
   bottom: 0;
+  background-color: white;
   left: 330px;
   height: 100px;
   width: 80%;
+}
+
+img {
+   border-radius: 50%;
+   margin-right: 25px;
 }
 
 /* The navigation menu links */
@@ -146,8 +148,6 @@ img {
     padding: 2px 16px;
 }
 
-
-
 body{
   background: #d7dbe2;
   font-family:'Fira Sans';
@@ -160,6 +160,7 @@ textarea {
     width: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
+    height: 100%;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;

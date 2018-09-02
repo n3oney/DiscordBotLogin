@@ -17,9 +17,7 @@
       <div class="bg">
         <div class="content" id="content">
           <div class="sending">
-      <textarea rows="1" cols="1" id="aa">Napisz coś</textarea>
-      <br>
-            <button type = "button" onClick="send()">Send!</button>
+      <textarea rows="1" cols="1" id="aa" onkeypress="if(event.keyCode == 13 && event.keyCode !== 16) return send();" placeholder="Wiadomość..."></textarea>
           </div>
             <div id="msgs" class="messages">
           </div>
