@@ -102,6 +102,38 @@ img {
    .sidenav2 a {font-size: 18px;}
 }
 
+/* The sidebar menu */
+.sidenav3 {
+   height: 100%; /* Full-height: remove this if you want "auto" height */
+   width: 200px; /* Set the width of the sidebar */
+   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+   z-index: 1; /* Stay on top */
+   top: 0; /* Stay at the top */
+   right: 0;
+   background-color: #111; /* Black */
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav3 a {
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav3 a:hover {
+   color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+   .sidenav3 {padding-top: 15px;}
+   .sidenav3 a {font-size: 18px;}
+}
+
 .content {
   margin-left: 15px;
 }

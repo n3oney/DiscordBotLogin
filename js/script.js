@@ -29,6 +29,10 @@ client.on("message", async message => {
   avatar.width = "50"
   avatar.src = (!message.author.avatarURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : message.author.avatarURL
   text.appendChild(avatar)
+  text.addEventListener('click', function(){
+    const pole = document.getElementById("aa")
+    pole.value = pole.value + "<@" + message.author.id + ">"
+  })
     text.appendChild(name)
   text.appendChild(content)
   var end = document.getElementById("end")
@@ -43,6 +47,19 @@ function loadGuilds() {
         const sidenav = document.getElementById("sidenav")
         let guildLink = document.createElement("a")
         guildLink.addEventListener( 'click', function(){
+
+          document.getElementById("users").childNodes.remove()
+          client.guilds.get(guild.id).members.forEach(member => {
+          let usersy = document.getElementById("users")
+          let userr = document.createElement("a")
+          let name = document.createTextNode(member.displayName)
+          userr.addEventListener('click', function(){
+            const pole = document.getElementById("aa")
+            pole.value = pole.value + "<@" + member.id + ">"
+          })
+          userr.appendChild(name)
+          usersy.appendChild(userr)
+        })
           document.getElementById("sidenav2").childNodes.remove()
           client.guilds.get(guild.id).channels.filter(channel => channel.type == "text").forEach(channel => {
           const sidenav = document.getElementById("sidenav2")
@@ -59,7 +76,6 @@ function loadGuilds() {
               })
             arr.reverse()
             arr.forEach(cnt => {
-              console.log("tryna page")
             let text = document.createElement("div")
             let name = document.createTextNode(cnt.author.username + ": ")
             let content = document.createTextNode(cnt.content)
@@ -68,11 +84,14 @@ function loadGuilds() {
             avatar.height = "50"
             avatar.width = "50"
             text.appendChild(avatar)
+            text.addEventListener('click', function(){
+              const pole = document.getElementById("aa")
+              pole.value = pole.value + "<@" + cnt.author.id + ">"
+            })
             text.appendChild(name)
             text.appendChild(content)
             var end = document.getElementById("end")
             document.getElementById("msgs").insertBefore(text, end)
-            console.log("paged")
             })
             window.scrollTo(0,document.body.scrollHeight);
             })
