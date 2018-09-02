@@ -48,15 +48,16 @@ function loadGuilds() {
               let arr = []
               selectedChannel = channel.id
               client.channels.get(channel.id).fetchMessages({limit: 100}).then(messages => {messages.forEach(msg => {
-                arr.push(msg.content)
-                console.log(arr)
+                arr.push(msg)
               })
             arr.reverse()
-            console.log(arr)
             arr.forEach(cnt => {
               console.log("tryna page")
             let text = document.createElement("div")
-            let content = document.createTextNode(cnt)
+            let content = document.createTextNode(cnt.content)
+            let avatar = document.createElement("img");
+            avatar.src = cnt.author.avatarURL
+            text.appendChild(avatar)
             text.appendChild(content)
             var end = document.getElementById("end")
             document.getElementById("msgs").insertBefore(text, end)
