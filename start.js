@@ -19,10 +19,14 @@ function createWindow () {
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   async function createWindow () {
-    win = new BrowserWindow({width: 800, height: 600})
-    win.maximize()
+    win = new BrowserWindow({width: 804, height: 804})
+        win.loadURL("file://" + __dirname + '/loading.ejs')
     // and load the index.html of the app.
-    win.loadURL('file://' + __dirname + '/index.ejs')
+
+    setTimeout(function() {
+          win.loadURL('file://' + __dirname + '/index.ejs')
+      win.maximize()
+    }, 4000)
 
     // Emitted when the window is closed.
     win.on('closed', () => {
