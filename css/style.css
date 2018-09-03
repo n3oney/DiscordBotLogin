@@ -64,6 +64,12 @@
    padding-top: 20px;
 }
 
+.name {
+  overflow: hidden;
+  color: gray;
+}
+
+
 .messages {
   margin-bottom: 100px
 }

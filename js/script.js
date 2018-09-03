@@ -22,8 +22,13 @@ document.getElementById('aa').value = ""
 client.on("message", async message => {
   if(message.channel.id !== selectedChannel) return;
   let text = document.createElement("div")
-  let name = document.createTextNode(message.author.username + ": ")
-  let content = document.createTextNode(message.content)
+  let name = document.createElement("span")
+  name.className = "name"
+  let namee = document.createTextNode(message.author.username)
+  name.appendChild(namee)
+  let content = document.createElement("div")
+  let content2 = document.createTextNode(message.content)
+  content.appendChild(content2)
   let avatar = document.createElement("img");
   avatar.height = "50"
   avatar.width = "50"
@@ -76,10 +81,15 @@ function loadGuilds() {
               })
             arr.reverse()
             arr.forEach(cnt => {
-            let text = document.createElement("div")
-            let name = document.createTextNode(cnt.author.username + ": ")
-            let content = document.createTextNode(cnt.content)
-            let avatar = document.createElement("img");
+              let text = document.createElement("div")
+              let name = document.createElement("span")
+              name.className = "name"
+              let namee = document.createTextNode(cnt.author.username)
+              name.appendChild(namee)
+              let content = document.createElement("div")
+              let content2 = document.createTextNode(cnt.content)
+              content.appendChild(content2)
+              let avatar = document.createElement("img");
             avatar.src = (!cnt.author.avatarURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : cnt.author.avatarURL
             avatar.height = "50"
             avatar.width = "50"
