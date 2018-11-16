@@ -1,5 +1,5 @@
 .bg {
-  background-color: #FFFFFF;
+  background-color: #2C2F33;
      min-height: 100vh;
     overflow-y: hidden;
     position: relative;
@@ -10,7 +10,9 @@
   }
 }
 
-
+.text {
+  color: #FFFFFF;
+}
 
 /* The sidebar menu */
 .sidenav {
@@ -66,9 +68,12 @@
 
 .name {
   overflow: hidden;
-  color: gray;
 }
 
+textarea {
+  color: white;
+  background-color: #484B54;
+}
 
 .messages {
   margin-bottom: 100px
@@ -77,10 +82,10 @@
 .sending {
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: #2C2F33;
   left: 330px;
   height: 100px;
-  width: 80%;
+  width: 1380px;
 }
 
 img {
@@ -419,3 +424,40 @@ input[type=text]:hover {
     text-align: left;
   }
 }
+
+/* SCROLLBAR DISCORDA */
+::-webkit-scrollbar {
+  width: 14px
+}
+::-webkit-scrollbar-thumb {
+  background-color: #28a2be;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  border-radius: 7px
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #f3f3f3;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  border-radius: 7px
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track-piece {
+    visibility: hidden
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track-piece {
+    visibility: visible
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .4);
+  border-color: transparent
+}
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-color: transparent
+}
+
+/* koniec scrollbara */

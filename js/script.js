@@ -26,7 +26,9 @@ client.on("message", async message => {
   name.className = "name"
   let namee = document.createTextNode(message.author.username)
   name.appendChild(namee)
+  name.style.color = message.member.highestRole.hexColor;
   let content = document.createElement("div")
+  content.className = "text";
   let content2 = document.createTextNode(message.content)
   content.appendChild(content2)
   let avatar = document.createElement("img");
@@ -85,8 +87,10 @@ function loadGuilds() {
               let name = document.createElement("span")
               name.className = "name"
               let namee = document.createTextNode(cnt.author.username)
+              name.style.color = cnt.member.highestRole.hexColor;
               name.appendChild(namee)
               let content = document.createElement("div")
+              content.className = "text";
               let content2 = document.createTextNode(cnt.content)
               content.appendChild(content2)
               let avatar = document.createElement("img");
@@ -148,6 +152,7 @@ function loadMessages() {
     console.log("tryna page")
   let text = document.createElement("div")
   let content = document.createTextNode(cnt)
+  content.className = "text";
   text.appendChild(content)
   var end = document.getElementById("end")
   document.getElementById("msgs").insertBefore(text, end)

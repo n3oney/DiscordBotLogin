@@ -19,7 +19,7 @@
       <div class="bg">
         <div class="content" id="content">
           <div class="sending">
-      <textarea rows="1" cols="1" id="aa" onkeypress="if(event.keyCode == 13 && event.keyCode !== 16) return send();" placeholder="Wiadomość..."></textarea>
+      <textarea style="color: white; background-color: #484B54" rows="1" cols="1" id="aa" onkeypress="if(event.keyCode == 13 && event.keyCode !== 16) { send(); event.preventDefault() }" placeholder="Wiadomość..."></textarea>
           </div>
             <div id="msgs" class="messages">
           </div>
