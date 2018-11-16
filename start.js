@@ -20,7 +20,7 @@ function createWindow () {
   // be closed automatically when the JavaScript object is garbage collected.
   async function createWindow () {
     win = new BrowserWindow({width: 1, height: 1})
-          win.loadURL('file://' + __dirname + '/index.ejs')
+          win.loadURL('file://' + __dirname + '/index.html')
       win.maximize()
 
     // Emitted when the window is closed.
