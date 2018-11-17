@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <script src="js/script.js" charset="utf-8"></script>
-<link rel="stylesheet" href="./css/style.css">
-<script type="text/javascript">const remote = require('electron').remote</script>
-      <meta charset="UTF-8">
-      <title>DiscordBotLogin</title>
-    </head>
-    <body onload="loadGuilds()">
-      <div class="sidenav" id="sidenav">
-</div>
-<div class="sidenav2" id="sidenav2">
-</div>
-<div class="sidenav3" id="users">
-</div>
-      <div class="bg">
-        <div class="content" id="content">
-          <div class="sending">
-      <textarea style="color: white; background-color: #484B54" rows="1" cols="1" id="aa" onkeypress="if(event.keyCode == 13 && event.keyCode !== 16) { send(); event.preventDefault() }" placeholder="Wiadomość..."></textarea>
-          </div>
-            <div id="msgs" class="messages">
-          </div>
-       </div>
+<html>
 
-     </div>
-    </body>
-  </html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <script src="js/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <title>DiscordBotLogin</title>
+</head>
+
+<body onload="loadGuilds()">
+  <div class="menu">
+    <ul class="menu-options">
+      <li class="menu-option">Back</li>
+      <li class="menu-option">Reload</li>
+      <li class="menu-option">Save</li>
+      <li class="menu-option">Save As</li>
+      <li class="menu-option">Inspect</li>
+    </ul>
+  </div>
+  <div class="sidenav" id="sidenav"></div>
+  <div class="sidenav2" id="sidenav2"></div>
+  <div class="sidenav3" id="users"></div>
+  <div class="bg" id="bg">
+    <div class="old" id="oldmsg" onclick="scrollToBottom(true)">You are viewing old messages - click to scroll down</div>
+    <div class="new" id="newmsg" onclick="scrollToBottom(true)">New messages - click to scroll down</div>
+    <div class="content" id="content">
+      <div class="sending">
+        <textarea style="color: white; background-color: #484B54" rows="1" cols="1" id="aa" onkeypress="if(event.keyCode == 13 && event.keyCode !== 16) { send(); event.preventDefault() }"
+          placeholder="Wiadomość..."></textarea>
+      </div>
+      <div id="msgs" class="messages">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

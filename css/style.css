@@ -1,12 +1,14 @@
 .bg {
   background-color: #363942;
-     min-height: 100vh;
-    overflow-y: hidden;
-    position: relative;
+  min-height: 100vh;
+  overflow-y: hidden;
+  position: relative;
 }
+
 @media screen and (min-width: 600px) {
   .bg {
     margin-left: 280px;
+    margin-right: 200px;
   }
 }
 
@@ -16,54 +18,74 @@
 
 /* The sidebar menu */
 .sidenav {
-   height: 100%; /* Full-height: remove this if you want "auto" height */
-   width: 100px; /* Set the width of the sidebar */
-   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-   z-index: 1; /* Stay on top */
-   top: 0; /* Stay at the top */
-   left: 0;
-   background-color: #181E21; /* Black */
-   overflow-x: hidden; /* Disable horizontal scroll */
-   padding-top: 20px;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 100px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #181E21;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
 }
 
 /* The navigation menu links */
 .sidenav a {
-   padding: 6px 8px 6px 16px;
-   text-decoration: none;
-   font-size: 25px;
-   color: #818181;
-   display: block;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-   color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 /* Style page content */
 .main {
-   margin-left: 160px; /* Same as the width of the sidebar */
-   padding: 0px 10px;
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+  padding: 0px 10px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-   .sidenav {padding-top: 15px;}
-   .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 /* The sidebar menu */
 .sidenav2 {
-   height: 100%; /* Full-height: remove this if you want "auto" height */
-   width: 180px; /* Set the width of the sidebar */
-   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-   z-index: 1; /* Stay on top */
-   top: 0; /* Stay at the top */
-   left: 100px;
-   background-color: #2E2F34; /* Black */
-   overflow-x: hidden; /* Disable horizontal scroll */
-   padding-top: 20px;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 180px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 100px;
+  background-color: #2E2F34;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
 }
 
 .name {
@@ -83,75 +105,92 @@ textarea {
   position: fixed;
   bottom: 0;
   background-color: #2C2F33;
-  left: 330px;
   height: 100px;
-  width: 1380px;
+  width: 1400px;
 }
 
 img {
-   border-radius: 50%;
-   margin-right: 25px;
+  border-radius: 50%;
+  margin-right: 25px;
 }
 
 /* The navigation menu links */
 .sidenav2 a {
-   padding: 6px 8px 6px 16px;
-   text-decoration: none;
-   font-size: 25px;
-   color: #818181;
-   display: block;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav2 a:hover {
-   color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-   .sidenav2 {padding-top: 15px;}
-   .sidenav2 a {font-size: 18px;}
+  .sidenav2 {
+    padding-top: 15px;
+  }
+
+  .sidenav2 a {
+    font-size: 18px;
+  }
 }
 
 /* The sidebar menu */
 .sidenav3 {
-   height: 100%; /* Full-height: remove this if you want "auto" height */
-   width: 200px; /* Set the width of the sidebar */
-   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-   z-index: 1; /* Stay on top */
-   top: 0; /* Stay at the top */
-   right: 0;
-   background-color: #303136; /* Black */
-   overflow-x: hidden; /* Disable horizontal scroll */
-   padding-top: 20px;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 200px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  right: 0;
+  background-color: #303136;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
 }
 
 /* The navigation menu links */
 .sidenav3 a {
-   padding: 6px 8px 6px 16px;
-   text-decoration: none;
-   font-size: 25px;
-   color: #818181;
-   display: block;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav3 a:hover {
-   color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 @media screen and (max-height: 450px) {
-   .sidenav3 {padding-top: 15px;}
-   .sidenav3 a {font-size: 18px;}
+  .sidenav3 {
+    padding-top: 15px;
+  }
+
+  .sidenav3 a {
+    font-size: 18px;
+  }
 }
 
 .content {
   margin-left: 15px;
 }
+
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   display: inline-block;
   margin-left: 50px;
   margin-right: 50px;
@@ -161,18 +200,18 @@ img {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
 .card2 {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   display: inline-block;
   margin-top: 50px;
   margin-left: 25px;
@@ -183,34 +222,81 @@ img {
 
 /* On mouse-over, add a deeper shadow */
 .card2:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
-body{
+body {
   background: #2C2F33;
-  font-family:'Open Sans';
+  font-family: 'Open Sans';
   color: black;
-  font-size:20px;
+  font-size: 20px;
   margin: 0px;
 }
 
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    height: 100%;
-    font-family:'Open Sans';
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: both;
+.new {
+  transition: background-color 0.5s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: 10px;
+  width: calc(100% - 500px);
+  background-color: rgba(33, 150, 243, 0.7);
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  visibility: hidden;
 }
+
+.new:active {
+  top: -5px;
+}
+
+.new:hover {
+  background-color: rgb(33, 150, 243);
+}
+
+.old {
+  transition: background-color 0.5s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: 10px;
+  width: calc(100% - 500px);
+  background-color: rgba(118, 124, 129, 0.7);
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  visibility: hidden;
+}
+
+.old:active {
+  top: -5px;
+}
+
+.old:hover {
+  background-color: rgb(118, 124, 129);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Open Sans';
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: both;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -219,7 +305,9 @@ textarea {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+.switch input {
+  display: none;
+}
 
 /* The slider */
 .slider {
@@ -247,18 +335,18 @@ textarea {
 }
 
 .deev {
- display: inline-block;
+  display: inline-block;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -272,18 +360,20 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 .button {
-    margin-top: 13px;
-    border-radius: 30px 30px 30px 30px;
-    background-color: #7289da;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  margin-top: 13px;
+  border-radius: 30px 30px 30px 30px;
+  background-color: #7289da;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
+
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -313,98 +403,111 @@ input:checked + .slider:before {
   opacity: 1;
   right: 0;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    display: flex;
-    flex-direction: column-reverse;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 10px;
 }
 
-li a {
-    display: block;
-    color: #5b5b60;
-    padding: 8px 16px;
-    text-decoration: none;
+a {
+  transition: color 0.5s ease;
+  display: block;
+  color: #5b5b60;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  text-decoration: none;
 }
 
 /* Change the link color on hover */
-li a:hover {
-    background-color: #898cb7;
-    color: white;
+a:hover {
+  color: white;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 .content {
-    margin-left: 20px;
-}
-.menutext {
-  font-family:Gaegu;
-}
-input[type=text] {
-    width: 270px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-input[type=text]:focus {
-    width: 75%;
-}
-input[type=text]:hover {
-   width: 75%;
+  margin-left: 20px;
 }
 
-.command-text{
- font-size:15px
+.menutext {
+  font-family: Gaegu;
 }
+
+input[type=text] {
+  width: 270px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 75%;
+}
+
+input[type=text]:hover {
+  width: 75%;
+}
+
+.command-text {
+  font-size: 15px
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
-    overflow: hidden;
+  background-color: #333;
+  overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-    display: none;
+  display: none;
 }
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -413,12 +516,16 @@ input[type=text]:hover {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;
@@ -430,35 +537,68 @@ input[type=text]:hover {
 ::-webkit-scrollbar {
   width: 14px
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #28a2be;
   background-clip: padding-box;
   border: 3px solid #fff;
   border-radius: 7px
 }
+
 ::-webkit-scrollbar-track-piece {
   background-color: #f3f3f3;
   background-clip: padding-box;
   border: 3px solid #fff;
   border-radius: 7px
 }
+
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track-piece {
-    visibility: hidden
+  visibility: hidden
 }
+
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track-piece,
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track-piece {
-    visibility: visible
+  visibility: visible
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, .4);
   border-color: transparent
 }
+
 ::-webkit-scrollbar-track-piece {
   background-color: transparent;
   border-color: transparent
 }
 
 /* koniec scrollbara */
+
+/* POCZĄTEK MENU */
+
+.menu {
+  width: 120px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: none;
+}
+
+.menu-options {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.menu-option {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+
+.menu-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* KONIEC MENU */

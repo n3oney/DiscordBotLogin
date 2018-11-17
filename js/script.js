@@ -29,6 +29,12 @@ client.on("message", async message => {
   name.style.color = message.member.highestRole.hexColor;
   let content = document.createElement("div")
   content.className = "text";
+  if(message.mentions) {
+      message.mentions.users.forEach(user => {
+        console.log(user)
+        message.content = message.content.replace("<@" + user.id + ">", user.username + "#" + user.discriminator)
+      })
+  }
   let content2 = document.createTextNode(message.content)
   content.appendChild(content2)
   let avatar = document.createElement("img");
@@ -43,8 +49,30 @@ client.on("message", async message => {
     text.appendChild(name)
   text.appendChild(content)
   var end = document.getElementById("end")
-  document.getElementById("msgs").insertBefore(text, end)
+  atBottom = (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight
+  if (atBottom) {
+    document.getElementById("msgs").insertBefore(text, end)
     window.scrollTo(0,document.body.scrollHeight);
+} else {
+  document.getElementById("msgs").insertBefore(text, end)
+  const stare = document.getElementById("oldmsg")
+  const nowe = document.getElementById("newmsg")
+  nowe.style.visibility = "visible"
+  stare.style.visibility = "hidden"
+}
+
+window.onscroll = function(ev) {
+  const stare = document.getElementById("oldmsg")
+  const nowe = document.getElementById("newmsg")
+  if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      nowe.style.visibility = "hidden"
+      stare.style.visibility = "hidden"
+  } else {
+    if(nowe.style.visibility == "visible") return;
+    stare.style.visibility = "visible"
+  }
+};
+
 })
 
 function loadGuilds() {
@@ -71,7 +99,7 @@ function loadGuilds() {
           client.guilds.get(guild.id).channels.filter(channel => channel.type == "text").forEach(channel => {
           const sidenav = document.getElementById("sidenav2")
           let channelLink = document.createElement("a")
-          channelLink.addEventListener( 'click', function(){
+          channelLink.addEventListener('click', function(){
             document.getElementById("msgs").childNodes.remove()
             let newEnd = document.createElement("div")
             newEnd.id = "end"
@@ -106,8 +134,13 @@ function loadGuilds() {
             text.appendChild(content)
             var end = document.getElementById("end")
             document.getElementById("msgs").insertBefore(text, end)
+            scrollToBottom(false)
+            const stare = document.getElementById("oldmsg")
+            const nowe = document.getElementById("newmsg")
+            nowe.style.visibility = "hidden"
+            stare.style.visibility = "hidden"
             })
-            window.scrollTo(0,document.body.scrollHeight);
+ 
             })
           })
           let content = document.createTextNode(channel.name)
@@ -136,6 +169,21 @@ function loadChannels(channelId) {
   })
 }
 
+function scrollToBottom(smooth) {
+  if(smooth) {
+  window.scroll({
+    left: 0,
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+  });
+} else {
+  window.scroll({
+    left: 0,
+    top: document.body.scrollHeight
+  });
+}
+}
+
 function loadMessages() {
   document.getElementById("msgs").childNodes.remove()
   let newEnd = document.createElement("div")
@@ -161,3 +209,35 @@ function loadMessages() {
   window.scrollTo(0,document.body.scrollHeight);
 })
 }
+
+
+/* POCZĄTEK MENU */
+let menu
+let menuVisible = false;
+
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+window.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+window.addEventListener("contextmenu", e => {
+  menu = document.querySelector(".menu");
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
+/* KONIEC MENU */
