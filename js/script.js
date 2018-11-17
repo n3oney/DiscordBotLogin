@@ -24,7 +24,7 @@ client.on("message", async message => {
   let text = document.createElement("div")
   let name = document.createElement("span")
   name.className = "name"
-  let namee = document.createTextNode(message.author.username)
+  let namee = document.createTextNode(message.member.displayName)
   name.appendChild(namee)
   name.style.color = message.member.highestRole.hexColor;
   let content = document.createElement("div")
@@ -86,7 +86,7 @@ function loadGuilds() {
               let text = document.createElement("div")
               let name = document.createElement("span")
               name.className = "name"
-              let namee = document.createTextNode(cnt.author.username)
+              let namee = document.createTextNode(cnt.member.displayName)
               name.style.color = cnt.member.highestRole.hexColor;
               name.appendChild(namee)
               let content = document.createElement("div")
@@ -118,8 +118,8 @@ function loadGuilds() {
         let content = document.createTextNode(guild.name)
         let av = document.createElement("img")
         av.src = (!guild.iconURL) ? 'https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png' : guild.iconURL
-        av.height = "100"
-        av.width = "100"
+        av.height = "70"
+        av.width = "70"
         guildLink.appendChild(av)
         sidenav.appendChild(guildLink)
       })
