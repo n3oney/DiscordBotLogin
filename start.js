@@ -6,18 +6,6 @@ const electron = require('electron')
 let win
 
 const globalShortcut = electron.globalShortcut
-
-function createWindow() {
-
-  globalShortcut.register('F5', function () {
-    console.log('f5 is pressed')
-    win.reload()
-  })
-  globalShortcut.register('CommandOrControl+R', function () {
-    console.log('CommandOrControl+R is pressed')
-    win.reload()
-  })
-}
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 async function createWindow() {
@@ -34,6 +22,14 @@ async function createWindow() {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null
+  })
+  globalShortcut.register('F5', function () {
+    console.log('f5 is pressed')
+    win.reload()
+  })
+  globalShortcut.register('CommandOrControl+R', function () {
+    console.log('CommandOrControl+R is pressed')
+    win.reload()
   })
 }
 
